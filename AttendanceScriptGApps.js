@@ -12,7 +12,7 @@ var optionalArgs = {
 function generateLoginActivityReport() {
   var now = new Date();
   var start = new Date( 2020, now.getMonth(), now.getDate(), 04, 59, 0, 0); //year is hard coded because .getYear() always returned "0120"
-  var end = new Date( 2020, now.getMonth(), now.getDate(), 09, 00, 0, 0);
+  var end = new Date( 2020, now.getMonth(), now.getDate(), 09, 00, 0, 0); // also these times are in Zulu (I think) - hour, minute, second, millisecond
   var startTime = start.toISOString();
   var endTime = end.toISOString();
 
