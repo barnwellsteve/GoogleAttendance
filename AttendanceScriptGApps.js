@@ -45,7 +45,8 @@ function generateLoginActivityReport() {
           studentID[1],
           studentID[2],
           item.actor.email,
-          item.events[0].name
+          item.events[0].name,
+          item.ipAddress
         ];
         rows.push(row);
         }
@@ -58,7 +59,7 @@ function generateLoginActivityReport() {
     var sheet = ss.getActiveSheet();
 
     // Append the headers.
-    var headers = ['Time', 'Last Name', 'First Name', 'Student ID', 'Grade', 'Campus', 'Account', 'Login Type']; // headers row MUST match row length created in the for loop
+    var headers = ['Time', 'Last Name', 'First Name', 'Student ID', 'Grade', 'Campus', 'Account', 'Login Type', 'IP']; // headers row MUST match row length created in the for loop
     sheet.appendRow(headers);
 
     // Append the results.
